@@ -7,11 +7,6 @@ export const UserSchema = defineMongooseModel({
       type: "string",
       required: true,
     },
-    username: {
-      type: "string",
-      required: true,
-      unique: true,
-    },
     email: {
       type: "string",
       required: true,
