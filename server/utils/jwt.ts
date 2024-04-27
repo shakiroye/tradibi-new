@@ -19,7 +19,6 @@ const generateRefreshToken = (user: any) => {
 
 export const generateTokens = (user: any) => {
   const accessToken = generateAccessToken(user);
-  console.log(accessToken);
   // const refreshToken = generateRefreshToken(user);
   return {
     accessToken: accessToken,
