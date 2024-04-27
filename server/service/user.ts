@@ -1,4 +1,5 @@
 import * as bcrypt from "bcrypt";
+import { UserDocument } from "../../types";
 
 export const createUser = async (userData: any) => {
   const finalUserData = {
@@ -9,10 +10,8 @@ export const createUser = async (userData: any) => {
   return await new UserSchema(finalUserData).save();
 };
 
-// export const getUserByUsername = (usernameData: string) => {
-//   return prisma.user.findUniqueOrThrow({
-//     where: {
-//       username: usernameData,
-//     },
-//   });
-// };
+export const getUserByEmail = async (
+  emailData: string
+): Promise<UserDocument | null> => {
+  return await UserSchema.findOne({ email: emailData });
+};
