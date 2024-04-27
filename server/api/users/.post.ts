@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
   const customError = (code: number, message: string) =>
     sendError(event, createError({ statusCode: code, statusMessage: message }));
 
-  if (!username) return customError(400, "username invalid");
   if (!email) return customError(400, "email invalid");
   if (!password) return customError(400, "password invalid");
   if (!confirmPassword) return customError(400, "confirmPassword invalid");
@@ -20,7 +19,6 @@ export default defineEventHandler(async (event) => {
     return customError(400, "Passwords do no match");
 
   const userData = {
-    username,
     email,
     password,
     name,
