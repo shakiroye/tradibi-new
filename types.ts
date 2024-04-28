@@ -3,6 +3,7 @@ export interface UserDocument extends Document {
   email: string;
   password: string;
   name: string;
+  announcements: AnnouncementDocument[];
 }
 
 export interface AnnouncementDocument extends Document {

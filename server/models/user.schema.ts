@@ -1,4 +1,5 @@
 import { defineMongooseModel } from "#nuxt/mongoose";
+import mongoose from "mongoose";
 
 export const UserSchema = defineMongooseModel({
   name: "User",
@@ -16,5 +17,11 @@ export const UserSchema = defineMongooseModel({
       type: "string",
       required: true,
     },
+    announcements: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Announcement",
+      },
+    ],
   },
 });

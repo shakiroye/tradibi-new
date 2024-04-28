@@ -9,6 +9,11 @@ export const AnnouncementSchema = defineMongooseModel({
       required: true,
     },
     description: String,
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     categoryAnnouncementId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "AnnouncementCategory",
