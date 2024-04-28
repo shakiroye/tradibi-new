@@ -1,5 +1,6 @@
 import * as bcrypt from "bcrypt";
 import { UserDocument } from "../../types";
+import { UserSchema } from "../models/user.schema";
 
 export const createUser = async (userData: any) => {
   const finalUserData = {
