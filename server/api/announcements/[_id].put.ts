@@ -1,12 +1,12 @@
-import { UserSchema } from "~/server/models/user.schema";
+import { AnnouncementSchema } from "~/server/models/announcement.schema";
 
 // https://nuxt.com/docs/guide/directory-structure/server
 export default defineEventHandler(async (event) => {
-  const { name } = await readBody(event);
+  const { title } = await readBody(event);
   try {
-    return await UserSchema.findOneAndUpdate(
+    return await AnnouncementSchema.findOneAndUpdate(
       { _id: event.context.params?._id },
-      { name },
+      { title },
       { new: true }
     );
   } catch (error) {

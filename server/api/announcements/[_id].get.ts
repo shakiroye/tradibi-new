@@ -1,12 +1,10 @@
+import { AnnouncementSchema } from "~/server/models/announcement.schema";
+
 export default defineEventHandler(async (event) => {
   try {
-    await UserSchema.findOneAndDelete({
+    return await AnnouncementSchema.findOne({
       _id: event.context.params?._id,
     });
-
-    return {
-      message: " Category deleted successfully",
-    };
   } catch (error) {
     return error;
   }

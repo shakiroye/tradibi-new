@@ -3,4 +3,23 @@ export interface UserDocument extends Document {
   email: string;
   password: string;
   name: string;
+  announcements: AnnouncementDocument[];
+}
+
+export interface AnnouncementDocument extends Document {
+  title: string;
+  description: string;
+  categoryAnnouncementId: string;
+  typeAnnouncementId: string;
+}
+
+export interface AnnouncementCategoryDocument extends Document {
+  title: string;
+  description: string;
+  announcements: AnnouncementDocument[];
+}
+export interface AnnouncementTypeDocument extends Document {
+  title: string;
+  description: string;
+  announcements: AnnouncementDocument[];
 }
