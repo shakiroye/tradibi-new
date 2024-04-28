@@ -24,7 +24,7 @@ You have to create a mongodb database
 
 ## .env file
 
-For the API test work correctly you should create an .env file a the route directory and it should look like this :
+For the API test work correctly you should create an .env file a the route directory and it should look like this:
 
 ```bash
 MONGODB_URI="mongodb://127.0.0.1:27017/tradibi"
