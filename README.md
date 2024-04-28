@@ -32,7 +32,3 @@ MONGODB_URI="mongodb://127.0.0.1:27017/tradibi"
 JWT_ACCESS_TOKEN_SECRET="JWT_ACCESS_TOKEN_SECRET"
 JWT_REFRESH_TOKEN_SECRET="JWT_REFRESH_TOKEN_SECRET"
 ```
-
-
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
