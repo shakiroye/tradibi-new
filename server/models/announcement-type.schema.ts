@@ -1,8 +1,8 @@
 import { defineMongooseModel } from "#nuxt/mongoose";
 import mongoose from "mongoose";
 
-export const AnnouncementCategorySchema = defineMongooseModel({
-  name: "AnnouncementCategory",
+export const AnnouncementTypeSchema = defineMongooseModel({
+  name: "AnnouncementType",
   schema: {
     title: {
       type: "string",

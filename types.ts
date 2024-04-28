@@ -6,14 +6,18 @@ export interface UserDocument extends Document {
 }
 
 export interface AnnouncementDocument extends Document {
-  id: number;
   title: string;
   description: string;
-  announcementCategory: string;
+  categoryAnnouncementId: string;
+  typeAnnouncementId: string;
 }
 
 export interface AnnouncementCategoryDocument extends Document {
-  id: number;
+  title: string;
+  description: string;
+  announcements: AnnouncementDocument[];
+}
+export interface AnnouncementTypeDocument extends Document {
   title: string;
   description: string;
   announcements: AnnouncementDocument[];

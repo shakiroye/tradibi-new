@@ -4,18 +4,19 @@ import mongoose from "mongoose";
 export const AnnouncementSchema = defineMongooseModel({
   name: "Announcement",
   schema: {
-    id: {
-      type: Number,
-      unique: true,
-    },
     title: {
       type: "string",
       required: true,
     },
     description: String,
-    announcementCategory: {
+    categoryAnnouncementId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "AnnouncementCategory",
+      required: true,
+    },
+    typeAnnouncementId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "AnnouncementType",
       required: true,
     },
   },
